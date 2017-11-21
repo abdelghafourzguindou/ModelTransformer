@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<RobotWork:Chrography xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RobotWork="http://robotwork.com" xmi:id="_vLzNUMTJEeeIOZ_gsmD9-Q" name="working">
+  <instructions xsi:type="RobotWork:GoForward" xmi:id="_yA39AMTJEeeIOZ_gsmD9-Q" cm="45"/>
+  <instructions xsi:type="RobotWork:Grab" xmi:id="_zfTC0MTJEeeIOZ_gsmD9-Q"/>
+  <instructions xsi:type="RobotWork:Release" xmi:id="_0gNtQMTJEeeIOZ_gsmD9-Q"/>
+  <instructions xsi:type="RobotWork:Rotate" xmi:id="_1dnJoMTJEeeIOZ_gsmD9-Q" degrees="90"/>
+  <instructions xsi:type="RobotWork:Chrography" xmi:id="_3Na6YMTJEeeIOZ_gsmD9-Q" name="station">
+    <instructions xsi:type="RobotWork:GoForward" xmi:id="_50FaoMTJEeeIOZ_gsmD9-Q" cm="24"/>
+    <instructions xsi:type="RobotWork:Grab" xmi:id="_7NgEoMTJEeeIOZ_gsmD9-Q"/>
+    <instructions xsi:type="RobotWork:Release" xmi:id="_7wkVcMTJEeeIOZ_gsmD9-Q"/>
+    <instructions xsi:type="RobotWork:Rotate" xmi:id="_8MrCoMTJEeeIOZ_gsmD9-Q" degrees="90"/>
+  </instructions>
+</RobotWork:Chrography>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated tmodel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="tmodel.presentation.TmodelModelWizardID"
+            name="%_UI_TmodelModelWizard_label"
+            class="tmodel.presentation.TmodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TmodelModelFile.gif">
+         <description>%_UI_TmodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated tmodel -->
+      <editor
+            id="tmodel.presentation.TmodelEditorID"
+            name="%_UI_TmodelEditor_label"
+            icon="icons/full/obj16/TmodelModelFile.gif"
+            extensions="tmodel"
+            class="tmodel.presentation.TmodelEditor"
+            contributorClass="tmodel.presentation.TmodelActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
