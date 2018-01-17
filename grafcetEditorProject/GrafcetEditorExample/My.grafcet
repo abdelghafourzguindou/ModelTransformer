@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grafcet:Grafcet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:grafcet="http://Grafcet.fr" location="location1" name="myGrafcet">
+  <elements xsi:type="grafcet:Step" location="" name="step1" isInitial="true"/>
+  <elements xsi:type="grafcet:Step" name="step2" isActive="true"/>
+  <elements xsi:type="grafcet:Step" name="step3"/>
+  <elements xsi:type="grafcet:Transition" name="transition1" incomingConnections="//@elements.0" outgoingConnections="//@elements.1"/>
+  <elements xsi:type="grafcet:Transition" name="transition2" incomingConnections="//@elements.1" outgoingConnections="//@elements.2"/>
+  <elements xsi:type="grafcet:Transition" name="transition3" incomingConnections="//@elements.2" outgoingConnections="//@elements.0"/>
+</grafcet:Grafcet>

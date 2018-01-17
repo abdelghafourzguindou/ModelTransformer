@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SimplStateMachineDC:StateMachine xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SimplStateMachineDC="http://SimplStateMachineDC.fr">
+  <transitions source="//@states.1" target="//@states.5" event="command received"/>
+  <transitions source="//@states.5" target="//@states.2" event="[command = withdraw]"/>
+  <transitions source="//@states.5" target="//@states.6" event="[else]"/>
+  <transitions source="//@states.6" target="//@states.3" event="[command=deposit]"/>
+  <transitions source="//@states.6" target="//@states.4" event="else"/>
+  <transitions source="//@states.0" target="//@states.1"/>
+  <transitions source="//@states.2" target="//@states.1"/>
+  <transitions source="//@states.3" target="//@states.1"/>
+  <transitions source="//@states.4" target="//@states.1"/>
+  <states xsi:type="SimplStateMachineDC:InitialState" name="debut"/>
+  <states xsi:type="SimplStateMachineDC:CompositeState" name="wait for command" initialState="//@states.0"/>
+  <states xsi:type="SimplStateMachineDC:CompositeState" name="Withdraw funds" Ord="" initialState="//@states.0"/>
+  <states xsi:type="SimplStateMachineDC:CompositeState" name="Deposit fund" initialState="//@states.0"/>
+  <states xsi:type="SimplStateMachineDC:CompositeState" name="Display error" initialState="//@states.0"/>
+  <states name="State1" isActive="true"/>
+  <states name="State2" isActive="true"/>
+</SimplStateMachineDC:StateMachine>

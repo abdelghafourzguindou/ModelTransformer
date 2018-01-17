@@ -39,6 +39,11 @@ public class Runner {
 		}
 	}
 	
+	/**
+	 * 
+	 * @param uri
+	 * @throws Exception
+	 */
 	static public void loademf(String uri) throws Exception {
 		URI emfURI = URI.createURI(uri.toString());
 		Injector injector = new TrmStandaloneSetup().createInjectorAndDoEMFRegistration();

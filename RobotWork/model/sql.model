@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
-<sql:Database xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sql="http://sql.com" xmi:id="_rGDcUMewEeeRX7S8bwNWhw" name="ensias">
-  <table xmi:id="_uAWDMMewEeeRX7S8bwNWhw" name="student">
-    <column xmi:id="_yFMYsMewEeeRX7S8bwNWhw" name="filiere" type="string"/>
-    <column name="cin" type="string"/>
-    <column name="lastname" type="string"/>
-    <column name="fabor" type="string"/>
-    <column name="datenaissance" type="date"/>
-    <column name="banana" type="integer"/>
-    <column name="CHATAHA" type="integer"/>
-  </table>
-  <table name="ZGUINDOU">
-    <column name="LOLO" type="LOLO"/>
-  </table>
-  <table name="Departement">
-    <column name="name" type="string"/>
+<sql:Database xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sql="http://sql.com" xmi:id="_TxJb4Pt4EeePhNSLw1TyLQ" name="ensias">
+  <table xmi:id="_VBykYPt4EeePhNSLw1TyLQ" name="Params">
+    <column xmi:id="_WKMW4Pt4EeePhNSLw1TyLQ" name="params" type="map"/>
   </table>
 </sql:Database>

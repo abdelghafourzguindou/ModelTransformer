@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="projectGrafcet" version="12.0.0.2017041100">
+  <ownedViewpoints name="MyGrafcetViewpoint" modelFileExtension="grafcet">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="grafcet" initialisation="true" domainClass="grafcet::Grafcet" enablePopupBars="true">
+      <metamodel href="http://Grafcet.fr#/"/>
+      <defaultLayer name="DefaultLayer">
+        <nodeMappings name="simpleStepNode" deletionDescription="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@toolSections.0/@ownedTools[name='deleteElement']" labelDirectEdit="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="aql:self.elements -> filter(grafcet::Step) -> select(p | not(p.isInitial) and not(p.isActive))" domainClass="grafcet::Step">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/myGrafcet.project.design/icons/simpleStep.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="initialStepNode" deletionDescription="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@toolSections.0/@ownedTools[name='deleteElement']" labelDirectEdit="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="aql:self.elements -> filter(grafcet::Step) -> select(p | p.isInitial)" domainClass="grafcet::Step">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/myGrafcet.project.design/icons/initialStep.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="activeStepNode" deletionDescription="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@toolSections.0/@ownedTools[name='deleteElement']" labelDirectEdit="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="aql:self.elements -> filter(grafcet::Step) -> select(p | p.isActive)" domainClass="grafcet::Step">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/myGrafcet.project.design/icons/activeStep.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="transitionNode" deletionDescription="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@toolSections.0/@ownedTools[name='deleteElement']" labelDirectEdit="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@toolSections.0/@ownedTools[name='editName']" domainClass="grafcet::Transition">
+          <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/myGrafcet.project.design/icons/tr4.jpg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="transitionInRelation" deletionDescription="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@toolSections.0/@ownedTools[name='deleteElement']" sourceMapping="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@nodeMappings[name='transitionNode']" targetMapping="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@nodeMappings[name='activeStepNode'] //@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@nodeMappings[name='initialStepNode'] //@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@nodeMappings[name='simpleStepNode']" targetFinderExpression="feature:incomingConnections">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="transitionOutRelation" deletionDescription="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@toolSections.0/@ownedTools[name='deleteElement']" sourceMapping="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@nodeMappings[name='transitionNode']" targetMapping="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@nodeMappings[name='activeStepNode'] //@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@nodeMappings[name='initialStepNode'] //@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@nodeMappings[name='simpleStepNode']" targetFinderExpression="feature:outgoingConnections">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="editorTools">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="simpleStepCreation" nodeMappings="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@nodeMappings[name='simpleStepNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="grafcet::Step" referenceName="elements">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'step'+container.elements->filter(grafcet::Step)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="initialStepCreation" precondition="aql:grafcet::Step -> select(p | p.isInitial)" nodeMappings="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@nodeMappings[name='initialStepNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="grafcet::Step" referenceName="elements">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'step'+container.elements->filter(grafcet::Step)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="activeStepCreation" nodeMappings="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@nodeMappings[name='activeStepNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="grafcet::Step" referenceName="elements">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'step'+container.elements->filter(grafcet::Step)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="transitionCreation" nodeMappings="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@nodeMappings[name='transitionNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="grafcet::Transition" referenceName="elements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="relationIn" edgeMappings="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@edgeMappings[name='transitionInRelation']" extraSourceMappings="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@nodeMappings[name='activeStepNode'] //@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@nodeMappings[name='initialStepNode'] //@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@nodeMappings[name='simpleStepNode']" extraTargetMappings="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@nodeMappings[name='transitionNode']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="incomingConnections" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="relationOut" edgeMappings="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@edgeMappings[name='transitionOutRelation']" extraSourceMappings="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@nodeMappings[name='transitionNode']" extraTargetMappings="//@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@nodeMappings[name='activeStepNode'] //@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@nodeMappings[name='initialStepNode'] //@ownedViewpoints[name='MyGrafcetViewpoint']/@ownedRepresentations[name='grafcet']/@defaultLayer/@nodeMappings[name='simpleStepNode']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="outgoingConnections" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="deleteElement">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editName">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="myGrafcet.project.design.Services"/>
+  </ownedViewpoints>
+</description:Group>
